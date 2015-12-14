@@ -6,5 +6,6 @@ $.extend($.expr[":"], {
   }
 });
 for (var i = 0; i< banned.length; i++) {
-	$("div:containsCaseInsensitive('star wars')").hide();
+	$("div:containsCaseInsensitive('" + banned[i] + "')").hide();
+	//$('div').find('div':containsCaseInsensitive)
 }
