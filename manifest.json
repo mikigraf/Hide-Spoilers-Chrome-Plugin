@@ -1,0 +1,20 @@
+{
+	"manifest_version" : 2,
+	"name" : "Star Wars Spoiler Hider",
+	"version" : "0.1",
+	"description" : "Hides Star Wars spoilers on any website",
+	"background" : {
+		"scripts" : ["background.js"]
+	},
+	"content_scripts" : [{
+		"matches" : ["<all_urls>"],
+		//"exclude_matches": ["http://www.facebook.com/","https://www.facebook.com/"],
+		"js" : ["jquery-2.1.4.js","content.js"]
+	}],
+	"permissions" : [
+		"tabs",
+		"http://*/*",
+		"https://*/*",
+		"<all_urls>"
+	]
+}
